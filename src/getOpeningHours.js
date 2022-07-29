@@ -4,12 +4,12 @@ const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 const dayError = 'The day must be valid. Example: Monday';
 
 const isStringRepresentNumber = (string, what) => {
-  if (!/^\d+$/.test(string)) {
+  if (!/^\d+$/.test(string)) { // Se o param string não for equivalente a number retorna erro.
     throw new Error(`The ${what} should represent a number`);
   }
 };
 
-const validateAbbreviation = (abbreviation) => {
+const validateAbbreviation = (abbreviation) => { // Se o param abbreviation for !== AM || PM retorna erro.
   if (!['AM', 'PM'].includes(abbreviation)) {
     throw new Error('The abbreviation must be \'AM\' or \'PM\'');
   }
@@ -31,7 +31,7 @@ const validateHour = (hour) => {
   }
 };
 
-const validateDay = (day) => {
+const validateDay = (day) => { // Se o param passado não for === um dos elementos do array weekDays retorna erro.
   if (!weekDays.includes(day)) {
     throw new Error(dayError);
   }
