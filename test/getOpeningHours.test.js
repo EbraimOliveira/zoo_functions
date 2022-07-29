@@ -13,4 +13,7 @@ describe('Testes da função getOpeningHours', () => {
   it('Para os argumentos Saturday e C9: 00 - AM deve lançar uma exceção com a mensagem: \'The hour should represent a number\'', () => {
     expect(() => getOpeningHours('Saturday', 'C9:00')).toThrow('The hour should represent a number');
   });
+  it('Para os argumentos Friday e 09: 00 - ZM deve lançar uma exceção com a mensagem: \'The abbreviation must be \'AM\' or \'PM\'', () => {
+    expect(() => getOpeningHours('Friday', '09:00-ZM')).toThrow('The abbreviation must be \'AM\' or \'PM\'');
+  });
 });
