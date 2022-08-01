@@ -3,9 +3,9 @@ const data = require('../data/zoo_data');
 const speciesList = data.species;
 const countAnimals = (animal) => {
   if (!animal) {
-    const allAnimalList = speciesList.reduce((acc, specie) =>
-      acc = { ...acc, [specie.name]: specie.residents.length }, {});
-    return allAnimalList;
+    const allAnimalsList = speciesList.reduce((acc, specie) =>
+      ({ ...acc, [specie.name]: specie.residents.length }), {});
+    return allAnimalsList;
   }
   if (Object.keys(animal).length === 1) {
     const specieObject = speciesList.find((specie) => Object.values(animal)[0] === specie.name);
