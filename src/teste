@@ -1,0 +1,11 @@
+
+const test = (param) => {
+    if (Object.entries(param).length === 1) {
+        return '01';
+    }
+}
+
+console.log(test({
+    key: 'value',
+    keyOne: 'valueOne'
+}));
