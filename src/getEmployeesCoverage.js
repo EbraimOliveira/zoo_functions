@@ -21,13 +21,20 @@ const employeeReturnObject = (param) => ({
   locations: locationsList(param),
 });
 
+const allEmployees = () =>
+  employees.map((employee) => employeeReturnObject(employee));
+
 const getEmployeesCoverage = (param) => {
+  if (!param) {
+    return allEmployees();
+  }
   const employeeObject = employees.find((emplyee) => emplyee.id === Object.values(param)[0]
     || emplyee.firstName === Object.values(param)[0]
     || emplyee.lastName === Object.values(param)[0]);
   if (employeeObject) {
     return employeeReturnObject(employeeObject);
   }
+  throw new Error('Informações inválidas');
 };
 
 console.log(getEmployeesCoverage({ name: 'Spry' }));
