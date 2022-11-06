@@ -13,9 +13,9 @@ const countEntrants = (entrants) => entrants.reduce((acc, visitant) => {
 
 const calculateEntry = (entrants) => {
   if (!entrants || Object.values(entrants).length === 0) {
-    return 0; //! Object.values(entrants).length
+    return 0;
   }
-  const visitantList = Object.values(countEntrants(entrants)); // [3, 2, 1]
+  const visitantList = Object.values(countEntrants(entrants));
   const sum = (visitantList[0] * data.prices.child)
     + (visitantList[1] * data.prices.adult)
     + (visitantList[2] * data.prices.senior);
