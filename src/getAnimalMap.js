@@ -9,7 +9,6 @@ function getAnimalMap(options) {
       SW: ['frogs', 'snakes'],
     };
   }
-
 }
 
 module.exports = getAnimalMap;
