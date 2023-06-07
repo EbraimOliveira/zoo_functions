@@ -4,7 +4,7 @@ Este projeto foi desenvolvido durante o módulo de fundamentos do curso da Trybe
 
 Objetivo
 
-Este projeto foi essencial para desenvolver a capacidade de raciocínio lógico, resolução de problemas e aplicação de conceitos e ferramentas nas linguagem proposta.
+Desenvolver a capacidade de raciocínio lógico, resolução de problemas e aplicação de conceitos e ferramentas na linguagem proposta.
 
 Tecnologias Utilizadas
 
